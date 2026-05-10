@@ -1,0 +1,50 @@
+/* ═══════════════════════════════════════════════════════════
+   DESIGN TOKENS  — Warm Earth / Topographic Palette
+   All variables live here. Touch only this file to retheme.
+═══════════════════════════════════════════════════════════ */
+:root {
+  /* ── Colour palette ─────────────────────────────────── */
+  --clr-bg:         #0f0a08;      /* near-black warm */
+  --clr-surface:    #1a1008;      /* dark espresso */
+  --clr-surface-2:  #221508;      /* slightly lighter */
+  --clr-paper:      #f5ede0;      /* warm off-white for reversed sections */
+
+  --clr-maroon:     #7b1c1c;      /* deep maroon */
+  --clr-red:        #b83232;      /* vivid red */
+  --clr-orange:     #d4622a;      /* terracotta orange */
+  --clr-amber:      #e8962a;      /* warm amber */
+  --clr-sienna:     #a04520;      /* sienna brown */
+  --clr-brown:      #6b3a1f;      /* rich brown */
+
+  /* ── Semantic roles ──────────────────────────────────── */
+  --accent:         var(--clr-orange);
+  --accent-2:       var(--clr-maroon);
+  --accent-3:       var(--clr-amber);
+  --accent-dim:     rgba(212, 98, 42, 0.12);
+  --accent-glow:    rgba(212, 98, 42, 0.07);
+  --border:         rgba(212, 98, 42, 0.18);
+  --border-hover:   rgba(212, 98, 42, 0.55);
+  --glass:          rgba(26, 16, 8, 0.75);
+
+  --text:           #f0e4d0;      /* warm cream */
+  --text-muted:     #9a7a60;      /* muted warm */
+  --text-faint:     #4a3020;      /* very faint warm */
+  --text-on-accent: #0f0a08;      /* dark on bright bg */
+
+  /* ── Typography ──────────────────────────────────────── */
+  --ff-display: 'Fraunces', Georgia, serif;
+  --ff-body:    'Outfit', system-ui, sans-serif;
+  --ff-mono:    'Space Mono', monospace;
+
+  /* ── Spacing & shape ─────────────────────────────────── */
+  --nav-h:      68px;
+  --radius:     10px;
+  --radius-sm:  5px;
+  --radius-lg:  20px;
+  --ease:       cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out:   cubic-bezier(0, 0, 0.2, 1);
+
+  /* ── Topo SVG colours (used in topo pattern) ─────────── */
+  --topo-stroke:    rgba(160, 69, 32, 0.35);   /* sienna contours */
+  --topo-stroke-hi: rgba(212, 98, 42, 0.55);   /* orange highlight contour */
+}
