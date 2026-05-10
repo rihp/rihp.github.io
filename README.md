@@ -1,11 +1,6 @@
-# Roberto Henríquez Perozo
-### Data Analyst | Python · Pipelines · Automation · Machine Learning · Business Intelligence · Logistics
+# Roberto Henríquez
+### AI Engineer & Technical PM | LLM Systems · GenAI Products · Team Leadership
 
-Analyst with Python skills and a strongbackground in marketingand business. Interested in the future of data and generating detailed and cross-functional insights dashboards for ***precise*** decision making.
+Applied AI engineer and technical PM specializing in LLM systems and GenAI products. Proven track record of leading cross-functional engineering teams, driving complex AI architectures from prototype to production, and contributing foundational tooling to the open-source ecosystem.
 
-**Constantly learning. ~ ♠**
-
-
-# Check the live website @ [henriquezperozo.com](https://henriquezperozo.com)
-# Also check HackFS Hackathon project here @ [web3api.dev](https://web3api.dev)
-
+**View the live portfolio @ [henriquezperozo.com](https://henriquezperozo.com)**
