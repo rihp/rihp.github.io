@@ -41,7 +41,7 @@ body::after {
   z-index: 0;
   background: radial-gradient(ellipse 60% 60% at 50% 50%,
     var(--clr-bg) 15%,
-    rgba(15,10,8,0.7) 55%,
+    var(--shadow-gradient) 55%,
     transparent 80%);
 }
 

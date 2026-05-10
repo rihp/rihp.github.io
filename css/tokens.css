@@ -25,6 +25,9 @@
   --border:         rgba(212, 98, 42, 0.18);
   --border-hover:   rgba(212, 98, 42, 0.55);
   --glass:          rgba(26, 16, 8, 0.75);
+  --nav-bg:         rgba(15, 10, 8, 0.92);
+  --nav-bg-mobile:  rgba(15, 10, 8, 0.98);
+  --shadow-gradient: rgba(15, 10, 8, 0.7);
 
   --text:           #f0e4d0;      /* warm cream */
   --text-muted:     #9a7a60;      /* muted warm */
@@ -47,4 +50,22 @@
   /* ── Topo SVG colours (used in topo pattern) ─────────── */
   --topo-stroke:    rgba(160, 69, 32, 0.35);   /* sienna contours */
   --topo-stroke-hi: rgba(212, 98, 42, 0.55);   /* orange highlight contour */
+}
+
+/* ── Light Theme ─────────────────────────────────────── */
+html[data-theme="light"] {
+  --clr-bg:         #f5ede0;
+  --clr-surface:    #e8dcc8;
+  --clr-surface-2:  #d8cbb5;
+  --clr-paper:      #0f0a08;
+
+  --text:           #1a1008;
+  --text-muted:     #6b4a3a;
+  --text-faint:     #9a7a60;
+  --text-on-accent: #f5ede0;
+
+  --glass:          rgba(245, 237, 224, 0.75);
+  --nav-bg:         rgba(245, 237, 224, 0.92);
+  --nav-bg-mobile:  rgba(245, 237, 224, 0.98);
+  --shadow-gradient: rgba(245, 237, 224, 0.7);
 }

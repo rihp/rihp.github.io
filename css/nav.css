@@ -9,7 +9,7 @@ nav {
   transition: background 0.35s var(--ease), border-color 0.35s var(--ease);
 }
 nav.scrolled {
-  background: rgba(15, 10, 8, 0.92);
+  background: var(--nav-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
@@ -69,6 +69,41 @@ nav.scrolled {
 .nav-links a:hover { color: var(--text); }
 .nav-links a:hover::after { width: 100%; }
 
+/* Controls (Toggle + Hamburger) */
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+  padding: 4px;
+}
+.theme-toggle:hover {
+  color: var(--accent);
+}
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+.theme-toggle .moon-icon {
+  display: none;
+}
+html[data-theme="light"] .theme-toggle .sun-icon {
+  display: none;
+}
+html[data-theme="light"] .theme-toggle .moon-icon {
+  display: block;
+}
+
 /* Mobile hamburger */
 .nav-toggle {
   display: none;
@@ -94,7 +129,7 @@ nav.scrolled {
     position: absolute;
     top: var(--nav-h);
     left: 0; right: 0;
-    background: rgba(15, 10, 8, 0.98);
+    background: var(--nav-bg-mobile);
     border-bottom: 1px solid var(--border);
     flex-direction: column;
     gap: 0;
