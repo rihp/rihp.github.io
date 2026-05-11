@@ -1,0 +1,198 @@
+/* ═══════════════════════════════════════════════════════════
+   CONNECT PAGE STYLES
+═══════════════════════════════════════════════════════════ */
+
+body {
+  overflow: hidden; /* Prevent scrolling on this page */
+}
+
+/* We need to override the background gradient from base.css since we have a 3D canvas */
+body::after {
+  display: none;
+}
+body::before {
+  display: none; /* remove 2d topo */
+}
+
+#connect-main {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: var(--nav-h);
+}
+
+#canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#ui-overlay {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 650px;
+  padding: 20px;
+}
+
+.glass-panel {
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(212, 98, 42, 0.05);
+  transition: border-color 0.3s;
+}
+
+#agent-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.agent-question {
+  font-family: var(--ff-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.agent-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: fadeIn 0.4s ease-out 0.1s forwards;
+  opacity: 0;
+}
+
+.agent-btn {
+  background: var(--clr-surface-2);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--ff-mono);
+  font-size: 15px;
+  padding: 16px 20px;
+  border-radius: var(--radius-sm);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.agent-btn::before {
+  content: '▸';
+  color: var(--accent);
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.agent-btn:hover {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  color: var(--text);
+  transform: translateX(4px);
+}
+.agent-btn:hover::before {
+  opacity: 1;
+}
+
+.back-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-faint);
+  padding: 0 0 16px 0;
+  font-size: 13px;
+  width: max-content;
+}
+.back-btn::before { content: none; }
+.back-btn:hover {
+  background: transparent;
+  border-color: transparent;
+  color: var(--text);
+  transform: translateX(-4px);
+}
+
+.terminal-loader {
+  font-family: var(--ff-mono);
+  color: var(--accent);
+  font-size: 14px;
+  text-align: center;
+  animation: pulse 1.5s infinite;
+}
+
+.input-field {
+  width: 100%;
+  background: var(--clr-surface-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--ff-body);
+  font-size: 16px;
+  padding: 16px 20px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.input-field:focus {
+  border-color: var(--accent);
+}
+.input-field::placeholder {
+  color: var(--text-faint);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: fadeIn 0.4s ease-out 0.1s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* Success State */
+.success-message {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.success-icon {
+  color: var(--accent);
+  width: 48px;
+  height: 48px;
+  margin-bottom: 8px;
+}
+
+/* Light Theme Overrides */
+html[data-theme="light"] .glass-panel {
+  box-shadow: 0 10px 40px rgba(123, 28, 28, 0.05);
+  background: rgba(245, 237, 224, 0.55);
+  border: 1px solid rgba(123, 28, 28, 0.1);
+}
